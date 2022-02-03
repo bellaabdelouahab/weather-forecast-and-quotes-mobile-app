@@ -30,10 +30,11 @@ class _MyHomePageState extends State<MyHomePage> {
     "The way to get started is to quit talking and begin doing.",
     "Your time is limited, so don't waste it living someone else's life.",
     "If life were predictable it would cease to be life, and be without flavor. "
+    "being short is okkey , if the sky falls down tall peaple will die first "
   ];
   void _incrementCounter() {
     setState(() {
-      // _counter++;
+      atext.add("HEllo THere");
     });
   }
 
@@ -44,8 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: ListView(
         children: atext
             .map((e) => Card(
                   color: Colors.blue,

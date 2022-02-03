@@ -14,7 +14,7 @@ class NavBar extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.network(
-                  "https://oflutter.com/wp-content/uploads/2021/02/girl-profile.png",
+                  "https://www.google.com/imgres?imgurl=https%3A%2F%2Fraw.githubusercontent.com%2Ftufantunc%2FOpenAssetsInVSCode%2Fmaster%2Fassets%2Fcontext-menu.png&imgrefurl=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DTufanTunc.openasetsinvscode&tbnid=lx6sWeYyuLpkzM&vet=12ahUKEwiLhL_b7uP1AhUGxeAKHeMJCOkQMygAegUIARC7AQ..i&docid=tFczfLlDMGQPDM&w=378&h=134&q=image%20assets%20vscode&ved=2ahUKEwiLhL_b7uP1AhUGxeAKHeMJCOkQMygAegUIARC7AQ",
                   fit: BoxFit.cover,
                   width: 90,
                   height: 90,
