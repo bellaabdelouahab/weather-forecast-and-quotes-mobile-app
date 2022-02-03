@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'nav_bar.dart';
-import 'quote.dart';
+import 'myquote.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
   void _incrementCounter() {
     setState(() {
-      atext.add(Quote("HEllo THere", "sdsdff"));
+      atext.add(Quote("HEllo THere", "sdsdff", false));
     });
   }
 
@@ -57,9 +57,28 @@ class _MyHomePageState extends State<MyHomePage> {
         children: atext
             .map(
               (e) => Card(
+                margin: const EdgeInsets.all(8.0),
                 color: Colors.blue,
                 child: Padding(
-                    padding: const EdgeInsets.all(30.0), child: e.quote),
+                    padding: const EdgeInsets.all(30.0),
+                    child: Column(
+                      children: <Widget>[
+                        e.getquote(e),
+                        const SizedBox(height: 8.0),
+                        Text(
+                          e.author,
+                        ),
+                        const SizedBox(height: 15),
+                        FloatingActionButton(
+                          onPressed: () {
+                            setState(() {
+                              atext.remove(e);
+                            });
+                          },
+                          child: const Icon(Icons.delete),
+                        )
+                      ],
+                    )),
               ),
             )
             .toList(),
