@@ -69,13 +69,37 @@ class _MyHomePageState extends State<MyHomePage> {
                           e.author,
                         ),
                         const SizedBox(height: 15),
-                        FloatingActionButton(
-                          onPressed: () {
-                            setState(() {
-                              atext.remove(e);
-                            });
-                          },
-                          child: const Icon(Icons.delete),
+                        Row(
+                          children: [
+                            TextButton.icon(
+                              onPressed: () {
+                                setState(() {
+                                  e.getquote(e, false);
+                                });
+                              },
+                              label: const Text("Modify"),
+                              icon: const Icon(Icons.edit),
+                              style: TextButton.styleFrom(
+                                primary: Colors.white, //Text Color
+                                backgroundColor: Colors
+                                    .amberAccent, //Button Background Color
+                              ),
+                            ),
+                            TextButton.icon(
+                              onPressed: () {
+                                setState(() {
+                                  atext.remove(e);
+                                });
+                              },
+                              label: const Text("delete"),
+                              icon: const Icon(Icons.delete),
+                              style: TextButton.styleFrom(
+                                primary: Colors.white, //Text Color
+                                backgroundColor:
+                                    Colors.teal, //Button Background Color
+                              ),
+                            ),
+                          ],
                         )
                       ],
                     )),

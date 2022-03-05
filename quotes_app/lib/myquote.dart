@@ -6,10 +6,10 @@ class Quote {
   String author;
   Quote(this.quote, this.author, [this.edit = true]);
 
-  TextField getquote(Quote e) {
+  TextField getquote(Quote e,[edit = true]) {
     return TextField(
       controller: TextEditingController(text: e.quote),
-      readOnly: e.edit,
+      readOnly: edit,
     );
   }
 }
